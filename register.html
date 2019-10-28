@@ -10,6 +10,27 @@
 		
 		<style type="text/css">
 			
+			html,body{
+				-webkit-text-size-adjust:none;
+			}
+			
+			*{
+			    -webkit-tap-highlight-color:rgba(0,0,0,0);
+			}
+			
+			::-webkit-scrollbar {/*滚动条整体样式*/
+			    width: 0;
+			    height: 0;
+			}
+			::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+			    border-radius: 0;
+			    -webkit-box-shadow: none;
+			}
+			::-webkit-scrollbar-track {/*滚动条里面轨道*/
+			    -webkit-box-shadow: none;
+			    border-radius: 0;
+			}
+			
 			body {
 				width: 100%;
 				height: 100%;
@@ -22,11 +43,12 @@
 				font-family: "MicrosoftYaHei";
 				font-size: 0.26rem;
 				color: white;
+				overflow: hidden;
 			}
 			
 			.rules{
 				width: 100%;
-				height: 0.9rem;
+				height: 2.52rem;
 			}
 			.rules a{
 				display: block;
@@ -39,7 +61,9 @@
 				float: right;
 				background-color: rgba(255,255,255,1);
 				opacity: 0.75;
-				border-left: 0.2rem;
+				border-radius: 0.2rem;
+				margin-top: 1.3rem;
+				color: #5A6561;
 			}
 			
 			.invitateId{
@@ -48,7 +72,7 @@
 				color: #FFFFFF;
 				height: 0.4rem;
 				line-height: 0.4rem;
-				margin-top: 2rem;
+				margin-top: 0rem;
 				margin-bottom: 0.4rem;
 			}
 			.registercontainer{
@@ -71,7 +95,7 @@
 				border-radius:0.06rem;
 				border: none;
 				outline: none;
-				padding: 0rem;
+				padding: 0rem 0rem 0rem 0.2rem;
 				margin: 0rem;
 			}
 			
@@ -110,11 +134,11 @@
 				height: 0.62rem;
 				line-height: 0.62rem;
 				background-color: #FAE21D;
+				margin-top: 0.36rem;
 			}
 			
 			.introduce{
-				margin-left: 0.24rem;
-				margin-right:0.24rem;
+				margin: 2.0rem 0.24rem 0rem 0.24rem;
 			}
 							
 		</style>
@@ -150,9 +174,9 @@
 		</div>
 		
 		<div class="introduce">
-			<div>海淘网简介</div>
-			<label>海淘网成立于2014年，是专业的海淘购物网站，致力于用户随时随地买遍全球好物。
-				<label style="display: block;margin-left: 0.32rem;border: none;padding: 0rem;">
+			<div style="font-size: 0.32rem;">海淘网简介</div>
+			<label style="height: 0.4rem;line-height: 0.4rem;">海淘网成立于2014年，是专业的海淘购物网站，致力于用户随时随地买遍全球好物。
+				<label style="display: block;margin-left: 0.32rem;height: 0.4rem;line-height: 0.4rem;">
 					① 我们为用户提供全球网购导购返利，科技引领，让您越买越省钱。
 					<br>② 我们为用户提供全球互通的转运物流，便捷高效，一站式服务让包裹快到家。
 					<br>③ 我们为用户提供全球最值得买的精选商品，安全放心，
