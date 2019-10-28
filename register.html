@@ -6,10 +6,11 @@
 		<meta name="copyright" content="海淘网">
 		<meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" name="viewport">
 		<title>邀请分享</title>
-		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>      
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>     
 		<link href="css/index.css" type="text/css" rel="stylesheet"/>		
 	
 		<style type="text/css">
+			
 			body {
 				width: 100%;
 				height: 100%;
@@ -29,48 +30,112 @@
 			.rules a{
 				text-decoration: none;
 				font-size: 0.2rem;
-				width: 1.17rem;
-				height: 0.4rem;
+				width: 2.34rem;
+				height: 0.8rem;
+				line-height: 0.8rem;
+				text-align: center;
 				float: right;
 				margin-top: 1.3rem;
-				background-color: #FFFFFF;
+				background-color: rgba(255,255,255,1);
+				opacity: 0.75;
 				border-left: 0.18rem;
+				border-radius: 0.4rem;
 			}
 			
-			registercontainer{
-				width: 5rem;
-				height: 4rem;
-				margin: 0 auto;
-				overflow: hidden;
-				margin-top: 2rem;
-				background-color: yellow;
+			.invitateId{
+				font-size: 0.36rem;
+				text-align: center;
+				color: white;				
 			}
-						
+			.registercontainer{
+				width: 5rem;
+				height: 8rem;
+				margin: 0 auto;
+			}
+			
+			.registercontainer div{
+				width: 100%;
+				height: 0.7rem;
+			}
+			
+			div input{
+				height: 100%;
+				line-height: 100%;
+				background:rgba(255,255,255,1);
+				border-radius:0.06rem;
+				border: none;
+				outline: none;
+				padding: 0rem;
+				margin: 0rem;
+			}
+			
+			.phoneNumber{
+				width: 100%;
+			}
+			
+			.identifyingCode .phoneCode{
+				width: 150px;
+			}
+			
+			.identifyingImage{
+				width: 1.78rem;
+				height: 100%;
+				vertical-align: middle;
+				margin-left: 0.24rem;
+			}
+			
+			.sendVeity{
+				width: 1.78rem;
+				height: 100%;
+				line-height: 100%;
+				text-align: center;
+				background-color:rgba(238,238,238,1);
+				font-size: 0.24rem;
+				border-radius:0.06rem;
+				color: #323232;
+				outline: none;
+				border: none;
+				padding: 0rem;
+				margin-left: 0.24rem;
+			}
+			
+			.sumbitStyle{
+				width: 2rem;
+				height: 0.62rem;
+				line-height: 0.62rem;
+			}
+							
 		</style>
 	</head>
 	<body>
 		
-		
 		<div class="rules">
-			<a class="rulesStyle" href="www.baidu.com" target="_blank">活动规则</a>
+			<a href="www.baidu.com" target="_blank">活动规则</a>
 		</div>
 		
+		<div class="invitateId">邀请人ID：hongfuqing</div>
 		
 		<div class="registercontainer">
 			<form  name="registerForm" action="" method="get" onsubmit="return checkValue()">
-				<input name="phoneNumber" id="phoneNumberStyle" type="text"  placeholder="请输入手机号码" />
-				<div id="inlineContainer">
-					<input name="verityNumber" id="verityStyle"  type="text" placeholder="请输入短信验证码"/>
-					<div id="countdownStyle">60s</div>
+				<div>
+					<input name="phoneNumber" class="phoneNumber" type="text"  placeholder="请输入手机号码" />
 				</div>
-				<input class="sumbitStyle" type="submit" value="注册" />
+				
+				<div>
+					<input name="identifyingCode" class="identifyingCode"  type="text" placeholder="请输入图形验证码"/>
+					<img class="identifyingImage" src="img/Icon-120.png"  alt=""/>
+				</div>
+				
+				<div>
+					<input name="phoneCode" class="phoneCode" type="text" placeholder="请输入短信验证码"/>
+					<button  class="sendVeity" type="button">发送验证码</button>
+				</div>
+				
+				<div align="center">
+					<input class="sumbitStyle" type="submit" value="注册" />
+				</div>
 			</form>
 		</div>
-		
-		<div>
-			 免费升级海淘达人权益<span style="color: blue;">收到货</span>SDK返回收到货           
-		</div>
-		
 	</body>
 </html>
 
