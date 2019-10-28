@@ -85,38 +85,39 @@
 				height: 0.7rem;
 				margin-top: 0rem;
 				margin-bottom: 0.24rem;
-				padding: 0rem;
+				padding: 0rem;		
 			}
 			
 			input{
+				-webkit-appearance: none;/*去除移动端safari圆角bug*/
 				height: 100%;
 				line-height: 100%;
 				background:rgba(255,255,255,1);
 				border-radius:0.06rem;
 				border: none;
 				outline: none;
-				padding: 0rem 0rem 0rem 0.2rem;
+				padding: 0rem;
 				margin: 0rem;
 			}
 			
-			.phoneNumber{
+			#phoneNumber{
 				width: 100%;
+				height: 100%;
 			}
 			
-			.identifyingCode .phoneCode{
-				width: 150px;
+			#identifyingCode,#phoneCode{
+				width: 3rem;
+				height: 100%;
 			}
 			
-			.identifyingImage{
+			.identifyingImage,.sendVeity{
 				width: 1.78rem;
 				height: 100%;
 				vertical-align: middle;
-				margin-left: 0.24rem;
+				margin-left: 0.1rem;
 			}
 			
 			.sendVeity{
-				width: 1.78rem;
-				height: 100%;
 				line-height: 100%;
 				text-align: center;
 				background-color:rgba(238,238,238,1);
@@ -126,7 +127,7 @@
 				outline: none;
 				border: none;
 				padding: 0rem;
-				margin-left: 0.24rem;
+				
 			}
 			
 			.sumbitStyle{
@@ -135,10 +136,12 @@
 				line-height: 0.62rem;
 				background-color: #FAE21D;
 				margin-top: 0.36rem;
+				border-radius:0.06rem;
 			}
 			
 			.introduce{
-				margin: 2.0rem 0.24rem 0rem 0.24rem;
+				margin: 2.0rem 0.24rem 0rem.24rem;
+				padding-bottom: 0.8rem;
 			}
 							
 		</style>
@@ -154,16 +157,16 @@
 		<div class="registercontainer">
 			<form  name="registerForm" action="" method="get" onsubmit="return checkValue()">
 				<div class="commonStyle">
-					<input name="phoneNumber" class="phoneNumber" type="text"  placeholder="请输入手机号码" />
+					<input name="phoneNumber"  id="phoneNumber" type="text"  placeholder="请输入手机号码" />
 				</div>
 				
 				<div class="commonStyle">
-					<input name="identifyingCode" class="identifyingCode"  type="text" placeholder="请输入图形验证码"/>
+					<input name="identifyingCode" id="identifyingCode"  type="text" placeholder="请输入图形验证码"/>
 					<img class="identifyingImage" src="img/Icon-120.png"  alt=""/>
 				</div>
 				
 				<div class="commonStyle">
-					<input name="phoneCode" class="phoneCode" type="text" placeholder="请输入短信验证码"/>
+					<input name="phoneCode" id="phoneCode" type="text" placeholder="请输入短信验证码"/>
 					<button  class="sendVeity" type="button">发送验证码</button>
 				</div>
 				
@@ -192,17 +195,24 @@
 <script type="text/javascript">
 		
 	function checkValue(){
+		alert("ss");
 		var phoneNumber = document.forms["registerForm"]["phoneNumber"].value;
-		var verity = document.forms["registerForm"]["verityNumber"].value;
+		var verity = document.forms["registerForm"]["identifyingCode"].value;
+		var phoneCode = document.forms["registerForm"]["phoneCode"].value;
+		
 		if (phoneNumber==null ||phoneNumber==""){
-			
 			Toast("请输入手机号码");
 			return false;
 		}
 		else if(verity==null||verity==""){
+			Toast("请输入图片验证码");
+			return false;
+		}
+		else if(phoneCode==null||phoneCode==""){
 			Toast("请输入短信验证码");
 			return false;
 		}
+		
 		return true;
 	}
 	
