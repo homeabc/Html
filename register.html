@@ -6,9 +6,8 @@
 		<meta name="copyright" content="海淘网">
 		<meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" name="viewport">
 		<title>邀请分享</title>
-		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>     
-		<link href="css/index.css" type="text/css" rel="stylesheet"/>		
-	
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+		
 		<style type="text/css">
 			
 			body {
@@ -21,44 +20,51 @@
 				-moz-background-size: cover;
 				-webkit-background-size: cover;
 				font-family: "MicrosoftYaHei";
+				font-size: 0.26rem;
+				color: white;
 			}
 			
 			.rules{
 				width: 100%;
-				height: 2.12rem;
+				height: 0.9rem;
 			}
 			.rules a{
+				display: block;
 				text-decoration: none;
 				font-size: 0.2rem;
-				width: 2.34rem;
-				height: 0.8rem;
-				line-height: 0.8rem;
+				width: 1.6rem;
+				height: 0.4rem;
+				line-height: 0.4rem;
 				text-align: center;
 				float: right;
-				margin-top: 1.3rem;
 				background-color: rgba(255,255,255,1);
 				opacity: 0.75;
-				border-left: 0.18rem;
-				border-radius: 0.4rem;
+				border-left: 0.2rem;
 			}
 			
 			.invitateId{
 				font-size: 0.36rem;
 				text-align: center;
-				color: white;				
+				color: #FFFFFF;
+				height: 0.4rem;
+				line-height: 0.4rem;
+				margin-top: 2rem;
+				margin-bottom: 0.4rem;
 			}
 			.registercontainer{
 				width: 5rem;
-				height: 8rem;
-				margin: 0 auto;
+				margin: 0rem auto 0rem auto;
 			}
 			
-			.registercontainer div{
+			.commonStyle{
 				width: 100%;
 				height: 0.7rem;
+				margin-top: 0rem;
+				margin-bottom: 0.24rem;
+				padding: 0rem;
 			}
 			
-			div input{
+			input{
 				height: 100%;
 				line-height: 100%;
 				background:rgba(255,255,255,1);
@@ -103,6 +109,12 @@
 				width: 2rem;
 				height: 0.62rem;
 				line-height: 0.62rem;
+				background-color: #FAE21D;
+			}
+			
+			.introduce{
+				margin-left: 0.24rem;
+				margin-right:0.24rem;
 			}
 							
 		</style>
@@ -117,25 +129,38 @@
 		
 		<div class="registercontainer">
 			<form  name="registerForm" action="" method="get" onsubmit="return checkValue()">
-				<div>
+				<div class="commonStyle">
 					<input name="phoneNumber" class="phoneNumber" type="text"  placeholder="请输入手机号码" />
 				</div>
 				
-				<div>
+				<div class="commonStyle">
 					<input name="identifyingCode" class="identifyingCode"  type="text" placeholder="请输入图形验证码"/>
 					<img class="identifyingImage" src="img/Icon-120.png"  alt=""/>
 				</div>
 				
-				<div>
+				<div class="commonStyle">
 					<input name="phoneCode" class="phoneCode" type="text" placeholder="请输入短信验证码"/>
 					<button  class="sendVeity" type="button">发送验证码</button>
 				</div>
 				
 				<div align="center">
-					<input class="sumbitStyle" type="submit" value="注册" />
+					<input class="sumbitStyle" type="submit" value="立即注册" />
 				</div>
 			</form>
 		</div>
+		
+		<div class="introduce">
+			<div>海淘网简介</div>
+			<label>海淘网成立于2014年，是专业的海淘购物网站，致力于用户随时随地买遍全球好物。
+				<label style="display: block;margin-left: 0.32rem;border: none;padding: 0rem;">
+					① 我们为用户提供全球网购导购返利，科技引领，让您越买越省钱。
+					<br>② 我们为用户提供全球互通的转运物流，便捷高效，一站式服务让包裹快到家。
+					<br>③ 我们为用户提供全球最值得买的精选商品，安全放心，
+					<br>让用户轻松淘到正宗好货。
+				</label>
+			</label>
+		</div>
+		
 	</body>
 </html>
 
@@ -177,6 +202,12 @@
 </script>
 
 <script type="text/javascript">
+	window.onload = function () {
+
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+	
 	// 设置 rem 函数
 	function setRem() {
 		// 当前页面宽度相对于 750 宽的缩放比例，可根据自己需要修改。
