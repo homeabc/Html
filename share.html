@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="海淘网">
+	<meta name="copyright" content="海淘网">
+	<meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" name="viewport">
+
+	<title></title>
+	<link rel="stylesheet" href="css/base.css">
+	<style type="text/css">
+		body {
+			width: 100%;
+			height: 100%;
+			background: url('img/shareBackground.png');
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-size: cover;
+			-moz-background-size: cover;
+			-webkit-background-size: cover;
+			font-family: "MicrosoftYaHei";
+		}
+
+		.commonContaninerStyle {
+			width: 6.3rem;
+			margin: 0.4rem auto 0 auto;
+			border-radius: 0.08rem;
+			background-color: #FBF3CC;
+			padding-bottom: 0.3rem;
+			box-shadow: 0px 0.06rem 0.10rem 0px rgba(28, 28, 27, 0.31);
+		}
+
+		.commonTitleStyle {
+			display: block;
+			color: #666666;
+			font-size: 0.24rem;
+			padding-left: 0.24rem;
+			padding-right: 0.24rem;
+			line-height: 0.4rem;
+			border: 0px;
+		}
+
+		.commonContaninerStyle span {
+			color: #fb3a1b;
+		}
+
+		.info {
+			width: 100%;
+		}
+
+		.info img {
+			width: 1.36rem;
+			height: 1.36rem;
+			border-radius: 50%;
+			margin: 0 auto;
+			margin-top: 0.84rem;
+		}
+
+		.info .info_name {
+			font-size: 0.36rem;
+			font-weight: 400;
+			width: 100%;
+			text-align: center;
+			margin-top: 0.24rem;
+		}
+
+		.info_people {
+			width: 6.30rem;
+			height: 5.22rem;
+			background: rgba(251, 243, 204, 1);
+			box-shadow: 0px 0.06rem 0.10rem 0px rgba(28, 28, 27, 0.31);
+			border-radius: 0.08rem;
+			margin: 0 auto;
+			margin-top: 0.6rem;
+			overflow: hidden;
+			padding: 0 0.24rem;
+			box-sizing: border-box;
+		}
+
+		.info_people .info_people_top {
+			width: 100%;
+			font-size: 0.36rem;
+			font-weight: 400;
+			color: rgba(50, 50, 50, 1);
+			margin: 0.5rem 0;
+			line-height: 0.5rem;
+			text-align: center;
+		}
+
+		.info_people .have_peo {
+			font-size: 0.30rem;
+			font-weight: 400;
+		}
+
+		.info_people .img_list {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 0.44rem;
+		}
+
+		.info_people .img_list img {
+			width: 0.88rem;
+			height: 0.88rem;
+			background: rgba(240, 198, 2, 1);
+			border-radius: 50%;
+		}
+
+		.info_people .go_to_share {
+			width: 2.06rem;
+			height: 0.74rem;
+			background: rgba(250, 226, 29, 1);
+			box-shadow: 0px 0.06rem 0.09rem 0px rgba(0, 0, 0, 0.35);
+			border-radius: 0.08rem;
+			font-size: 0.38rem;
+			font-family: Microsoft YaHei;
+			font-weight: 400;
+			color: rgba(50, 50, 50, 1);
+			margin: 0 auto;
+			margin-top: 0.5rem;
+			line-height: 0.74rem;
+			text-align: center;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<div class="info">
+		<img src="img/Icon-120.png" alt="">
+		<div class="info_name">邀请人：李某</div>
+	</div>
+	<div class="info_people">
+		<div class="info_people_top">邀请5位好友完成注册</br>您将免费升级达人</div>
+
+		<div class="have_peo">已邀请好友</div>
+		<div class="img_list">
+			<img src="img/Icon-120.png" />
+			<img src="img/Icon-120.png" />
+			<img src="img/Icon-120.png" />
+			<img src="img/Icon-120.png" />
+			<img src="img/Icon-120.png" />
+		</div>
+		<div class="go_to_share" onclick="shareButon()">立即分享</div>
+	</div>
+	<div class="commonContaninerStyle">
+		<label class="commonTitleStyle"
+			style="padding-top: 0.26rem;padding-bottom: 0.26rem;font-size: 0.3rem;line-height: 0.28rem;">达人福利</label>
+		<label class="commonTitleStyle"> 升级达人，更多超值福利</label>
+		<label class="commonTitleStyle">1) 超级团购: 在团购价基础上，再享达人折扣，等于<span>供应链分销价</span>；</label>
+		<label class="commonTitleStyle">2) 转运优惠: 在海淘网APP购买海外商品，转运享受<span>额外9折</span>优惠；</label>
+		<label class="commonTitleStyle">3) <span>邀请红包</span>: 邀请好友一起，拿返利、用转运、买团购、领红包。</label>
+	</div>
+
+	<div class="commonContaninerStyle">
+		<label class="commonTitleStyle"
+			style="padding-top: 0.26rem;padding-bottom: 0.26rem;font-size: 0.3rem;line-height: 0.28rem;">活动规则</label>
+		<label class="commonTitleStyle">1) 活动时间：2019年11月1日-2020年10月31日；</label>
+		<label class="commonTitleStyle">2) 参与规则：海淘网已经注册用户成功邀请5位好友完成海淘网注册，邀请者将获得免费升级达人的权益；</label>
+		<label class="commonTitleStyle">3) 成功邀请定义: 好友完成海淘网手机号注册</label>
+		<label class="commonTitleStyle">4) 海淘新人定义: 从来没有在海淘网下过单的用户；</label>
+		<label class="commonTitleStyle">5) 活动常驻入口: 海淘网APP【海淘圈】-邀请有礼。</label>
+	</div>
+
+	<div class="commonContaninerStyle">
+		<label class="commonTitleStyle"
+			style="padding-top: 0.26rem;padding-bottom: 0.26rem;font-size: 0.3rem;line-height: 0.28rem;">奖励规则</label>
+		<label class="commonTitleStyle">1) 活动期间，通过此活动成功邀请5位好友完成海淘网注册，邀请者可获得<span>免费升级海淘达人权益</span>；</label>
+		<label class="commonTitleStyle">2) 如果邀请者已经是海淘达人，我们将会免费给您在原有达人时间上多续一年；</label>
+		<label class="commonTitleStyle">3) 每位邀请者仅获得一次免费升级达人机会；</label>
+		<label class="commonTitleStyle">4) 自11月1日起，达人权益升级。成功升级达人，您将在原有权益的基础上，另外获得</label>
+		<label class="commonTitleStyle">① 一张<span>满199减10的全场抵用券</span>（仅限新西兰直邮购使用）；</label>
+		<label class="commonTitleStyle">②不定期<span>评论抽奖</span>活动</label>
+		<label class="commonTitleStyle">5) 邀请者获得的奖励为海淘网优惠券，可在购买时抵用相应的金额。在海淘网APP【我的】-优惠券，可查看您获得的优惠券；</label>
+		<label class="commonTitleStyle">6) 通过不正当手段获取奖励，经查实【海淘网】有权撤该用户的活动资格并取消其奖励，情节严重者将追究其法律责任。</label>
+	</div>
+
+	<div align="center" style="font-size: 0.3rem;color: #323232; padding:0.2rem;">注:最终解释权归海淘网所有</div>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+	window.onload = function () {
+
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+	function shareButon() {
+		alert("----");
+	}
+
+	// 设置 rem 函数
+	function setRem() {
+		// 当前页面宽度相对于 750 宽的缩放比例，可根据自己需要修改。
+		const scale = document.documentElement.clientWidth / 750
+		// 设置页面根节点字体大小
+		document.documentElement.style.fontSize = 100 * scale + 'px'
+	}
+	// 初始化
+	setRem()
+	// 改变窗口大小时重新设置 rem
+	window.onresize = function () {
+		setRem()
+	}
+</script>
