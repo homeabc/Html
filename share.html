@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="author" content="海淘网">
 	<meta name="copyright" content="海淘网">
+	<meta name="referrer" content="no-referrer">
 	<meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" name="viewport">
 
 	<title></title>
@@ -130,7 +131,7 @@
 
 <body>
 	<div class="info">
-		<img src="img/Icon-120.png" alt="">
+		<img id="infoIcon" src="http://pic22.nipic.com/20120620/9644879_220135570113_2.jpg" alt="">
 		<div class="info_name">邀请人：李某</div>
 	</div>
 	<div class="info_people">
@@ -192,6 +193,11 @@
 	}
 	function shareButon() {
 		alert("----");
+	}
+	
+	function changeInfoIcon(iconUrl){
+		document.getElementById("infoIcon").src = iconUrl;
+		alert('速度回复');
 	}
 
 	// 设置 rem 函数
