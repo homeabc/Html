@@ -6,36 +6,17 @@
 		<meta name="copyright" content="海淘网">
 		<meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" name="viewport">
 		<title>邀请分享</title>
+		<link rel="stylesheet" href="css/base.css">
 		
 		
 		<style type="text/css">
-			
-			html,body{
-				-webkit-text-size-adjust:none;
-			}
-			
-			*{
-			    -webkit-tap-highlight-color:rgba(0,0,0,0);
-			}
-			
-			::-webkit-scrollbar {/*滚动条整体样式*/
-			    width: 0;
-			    height: 0;
-			}
-			::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
-			    border-radius: 0;
-			    -webkit-box-shadow: none;
-			}
-			::-webkit-scrollbar-track {/*滚动条里面轨道*/
-			    -webkit-box-shadow: none;
-			    border-radius: 0;
-			}
-			
+				
 			body {
 				width: 100%;
 				height: 100%;
-				background: url('img/registerBackground.png');
-				background-attachment: fixed;
+				background-image: url(img/registerBackground.png);
+				background-repeat: no-repeat;
+				background-attachment: scroll;
 				background-repeat: no-repeat;
 				background-size: cover;
 				-moz-background-size: cover;
@@ -50,6 +31,9 @@
 				width: 100%;
 				height: 2.52rem;
 			}
+	
+			
+			
 			.rules a{
 				display: block;
 				text-decoration: none;
@@ -61,9 +45,20 @@
 				float: right;
 				background-color: rgba(255,255,255,1);
 				opacity: 0.75;
-				border-radius: 0.2rem;
+				border-radius: 0.2rem 0rem 0rem 0.2rem;
 				margin-top: 1.3rem;
 				color: #5A6561;
+			}
+			
+			
+			@media screen and (min-device-height: 812px){
+				.rules{
+					width: 100%;
+					height: 4rem;
+				}
+				.rules a{
+					margin-top: 1.8rem;
+				}
 			}
 			
 			.invitateId{
@@ -156,6 +151,15 @@
 				margin: 2.0rem 0.24rem 0rem.24rem;
 				padding-bottom: 0.8rem;
 			}
+			
+			.commonRules{
+				padding: 0rem 0.20rem 0rem 0.23rem;
+				font-size: 0.26rem;
+				height: 0.4rem;
+				line-height: 0.4rem;
+				display: inline-block;
+			}
+			
 							
 		</style>
 	</head>
@@ -191,12 +195,10 @@
 		
 		<div class="introduce">
 			<div style="font-size: 0.32rem;">海淘网简介</div>
-			<label style="height: 0.4rem;line-height: 0.4rem;">海淘网成立于2014年，是专业的海淘购物网站，致力于用户随时随地买遍全球好物。
-				<br>&nbsp;&nbsp;&nbsp;①我们为用户提供全球网购导购返利，科技引领，让您越<br>&nbsp;&nbsp;&nbsp;买越省钱。
-				<br>&nbsp;&nbsp;&nbsp;②我们为用户提供全球互通的转运物流，便捷高效，一站<br>&nbsp;&nbsp;&nbsp;式服务让包裹快到家。
-				<br>&nbsp;&nbsp;&nbsp;③我们为用户提供全球最值得买的精选商品，安全放心，
-				<br>&nbsp;&nbsp;&nbsp;让用户轻松淘到正宗好货。
-			</label>
+			<label style="height: 0.4rem;line-height: 0.4rem;">海淘网成立于2014年，是专业的海淘购物网站，致力于用户随时随地买遍全球好物。</label>
+			<label class="commonRules">①我们为用户提供全球网购导购返利，科技引领，让您越买越省钱。</label>
+			<label class="commonRules">②我们为用户提供全球互通的转运物流，便捷高效，一站式服务让包裹快到家。</label>
+			<label class="commonRules">③我们为用户提供全球最值得买的精选商品，安全放心，让用户轻松淘到正宗好货</label>
 		</div>
 				
 	</body>
@@ -206,7 +208,6 @@
 <script type="text/javascript">
 		
 	function checkValue(){
-		alert("ss");
 		var phoneNumber = document.forms["registerForm"]["phoneNumber"].value;
 		var verity = document.forms["registerForm"]["identifyingCode"].value;
 		var phoneCode = document.forms["registerForm"]["phoneCode"].value;
