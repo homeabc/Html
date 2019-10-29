@@ -181,6 +181,7 @@
 	</div>
 
 	<div align="center" style="font-size: 0.3rem;color: #323232; padding:0.2rem;">注:最终解释权归海淘网所有</div>
+	
 
 </body>
 
@@ -193,7 +194,8 @@
 		document.documentElement.scrollTop = 0;
 	}
 	function shareButon() {
-		alert("----");
+		window.webkit.messageHandlers.jsToOcShareButton.postMessage({});
+		
 	}
 	
 	//客户端 传头像url 给html
