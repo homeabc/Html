@@ -10,6 +10,7 @@
 
 	<title></title>
 	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/ShowModel.css">
 	<style type="text/css">
 		body {
 			width: 100%;
@@ -125,12 +126,13 @@
 			line-height: 0.74rem;
 			text-align: center;
 		}
+		
 	</style>
 
 
 </head>
 
-<body>
+<body id="boydId">
 	<div class="info" align="center">
 		<img id="infoIcon" src="img/Icon-120.png" alt="">
 		<div class="info_name">邀请人：李某</div>
@@ -182,6 +184,11 @@
 
 	<div align="center" style="font-size: 0.3rem;color: #323232; padding:0.2rem;">注:最终解释权归海淘网所有</div>
 	
+	<div id="popWindow" class="popWindow" style="display: none;">
+		<!-- <img src="img/registerBackground.png" /> -->
+		<p class="load_ts">请点击右上角分享按钮</p>
+		</div>
+
 
 </body>
 
@@ -194,7 +201,16 @@
 		document.documentElement.scrollTop = 0;
 	}
 	function shareButon() {
-		window.webkit.messageHandlers.jsToOcShareButton.postMessage({});
+		
+		document.getElementById('popWindow').style.display = 'block';
+		
+		// var image =  document.createElement("img");
+		// image.setAttribute("id","newImage");
+		// image.style.cssText="width:100%;height: 100%;position: fixed; z-index: 999999;background: rgba(0, 0, 0,.7);";
+		// image.src = "img/registerBackground.png";
+		// document.body.appendChild(image);
+		// document.getElementById('myModel').style.display = 'block';
+		Toast("sdjhf sdfh ");
 	}
 	
 	//客户端 传头像url 给html
@@ -216,3 +232,4 @@
 		setRem()
 	}
 </script>
+
